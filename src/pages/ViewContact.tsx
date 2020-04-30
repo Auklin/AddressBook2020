@@ -18,11 +18,11 @@ import {
 } from '@ionic/react';
 import { personCircle, text } from 'ionicons/icons';
 import { RouteComponentProps } from 'react-router';
-import './ViewMessage.css';
+import './ViewContact.css';
 
-interface ViewMessageProps extends RouteComponentProps<{ id: string; }> { }
+interface ViewContactProps extends RouteComponentProps<{ id: string; }> { }
 
-const ViewMessage: React.FC<ViewMessageProps> = ({ match }) => {
+const ViewContact: React.FC<ViewContactProps> = ({ match }) => {
 
   const [message, setMessage] = useState<Message>();
 
@@ -30,9 +30,12 @@ const ViewMessage: React.FC<ViewMessageProps> = ({ match }) => {
     const msg = getMessage(parseInt(match.params.id, 10));
     setMessage(msg);
   });
-
-  const [text, setText] = useState<string>();
-
+  
+  const [firstNameText, setFirstNameText] = useState<string>();
+  const [lastNameText, setLastNameText] = useState<string>();
+  const [phoneNumberText, setPhoneNumberText] = useState<string>();
+  const [emailText, setEmailText] = useState<string>();
+  
   return (
     <IonPage id="view-message-page">
       <IonHeader translucent>
@@ -59,19 +62,19 @@ const ViewMessage: React.FC<ViewMessageProps> = ({ match }) => {
 
             <IonLabel position="stacked">First Name </IonLabel>
             <IonItem>
-              <IonInput value={message.firstName} placeholder="e.g. Jamie" onIonChange={e => setText(e.detail.value!)}></IonInput>
+              <IonInput value={firstNameText} placeholder={message.firstName} onIonChange={e => setFirstNameText(e.detail.value!)}></IonInput>
             </IonItem>
             <IonLabel position="stacked">Last Name </IonLabel>
             <IonItem>
-              <IonInput value={message.lastName} placeholder="e.g. Jamie" onIonChange={e => setText(e.detail.value!)}></IonInput>
+              <IonInput value={lastNameText} placeholder={message.lastName} onIonChange={e => setLastNameText(e.detail.value!)}></IonInput>
             </IonItem>
             <IonLabel position="stacked">Phone Number </IonLabel>
             <IonItem>
-              <IonInput value={message.phoneNumber} type="number" placeholder="Phone Number" onIonChange={e => setText(e.detail.value!)}></IonInput>
+              <IonInput value={phoneNumberText} type="number" placeholder={message.phoneNumber} onIonChange={e => setPhoneNumberText(e.detail.value!)}></IonInput>
             </IonItem>
             <IonLabel position="stacked">Email </IonLabel>
             <IonItem>
-              <IonInput value={message.email} type="email" placeholder="Email" onIonChange={e => setText(e.detail.value!)}></IonInput>
+              <IonInput value={emailText} placeholder={message.email} onIonChange={e => setEmailText(e.detail.value!)}></IonInput>
             </IonItem>
             
             </div>
@@ -82,4 +85,4 @@ const ViewMessage: React.FC<ViewMessageProps> = ({ match }) => {
   );
 };
 
-export default ViewMessage;
+export default ViewContact;

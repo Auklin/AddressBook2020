@@ -12,7 +12,7 @@ const messages: Message[] = [
     id: 0,
     photo: null,
     firstName: 'Matt',
-    lastName: 'Chorsey',
+    lastName: 'Cassy',
     email: 'matt.c@company.com',
     phoneNumber: "+19024808865"
   },
@@ -20,7 +20,7 @@ const messages: Message[] = [
     id: 1,
     photo: null,
     firstName: 'Lauren',
-    lastName: 'Ruthford',
+    lastName: 'Ruth',
     email: 'lauren.r@company.com',
     phoneNumber: "+19024765243"
   },
@@ -28,7 +28,7 @@ const messages: Message[] = [
     id: 2,
     photo: null,
     firstName: 'Jordan',
-    lastName: 'Firth',
+    lastName: 'Falker',
     email: 'jordan.f@company.com',
     phoneNumber: "+19024837543"
   }/*,

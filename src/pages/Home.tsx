@@ -10,7 +10,12 @@ import {
   IonRefresherContent,
   IonTitle,
   IonToolbar,
-  useIonViewWillEnter
+  useIonViewWillEnter,
+  IonButton,
+  IonGrid,
+  IonCol,
+  IonRow,
+  IonItem
 } from '@ionic/react';
 import './Home.css';
 
@@ -33,7 +38,20 @@ const Home: React.FC = () => {
     <IonPage id="home-page">
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Address Book</IonTitle>
+          <IonGrid>
+            <IonRow>
+              <IonCol>
+                <IonTitle>Address Book</IonTitle>
+              </IonCol>
+              <IonCol className="ion-text-right">
+                <IonButton>
+                  <IonItem routerLink={`/add`} color="blue">
+                    Add Contact
+                  </IonItem>
+                </IonButton>
+              </IonCol>
+            </IonRow>
+          </IonGrid>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
@@ -54,7 +72,6 @@ const Home: React.FC = () => {
         </IonList>
       </IonContent>
     </IonPage>
-  );
-};
-
-export default Home;
+  )
+}
+export default Home
