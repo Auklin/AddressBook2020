@@ -13,6 +13,8 @@ import {
   useIonViewWillEnter,
   IonInput,
   IonButton,
+  IonThumbnail,
+  IonImg,
 
 } from '@ionic/react';
 import { personCircle, text } from 'ionicons/icons';
@@ -34,6 +36,7 @@ const AddContact: React.FC<AddContactProps> = ({ match }) => {
     const [lastNameText, setLastNameText] = useState<string>();
     const [phoneNumberText, setPhoneNumberText] = useState<string>();
     const [emailText, setEmailText] = useState<string>();
+    const image = 'http://placekitten.com/g/200/300';
   
     return (
       <IonPage id="view-message-page">
@@ -56,6 +59,12 @@ const AddContact: React.FC<AddContactProps> = ({ match }) => {
               </IonItem>
   
               <div className="ion-padding">
+
+              <IonItem>
+                <IonThumbnail slot="start">
+                    <IonImg src={image} />
+                </IonThumbnail>
+            </IonItem>
   
               <IonLabel position="stacked">First Name </IonLabel>
               <IonItem>

@@ -1,6 +1,6 @@
 export interface Message {
   id: number;
-  photo: null;
+  photo: string;
   firstName: string;
   lastName: string;
   email: string;
@@ -10,7 +10,7 @@ export interface Message {
 const messages: Message[] = [
   {
     id: 0,
-    photo: null,
+    photo: "https://www.istockphoto.com/resources/images/PhotoFTLP/1035146258.jpg",
     firstName: 'Matt',
     lastName: 'Cassy',
     email: 'matt.c@company.com',
@@ -18,7 +18,7 @@ const messages: Message[] = [
   },
   {
     id: 1,
-    photo: null,
+    photo: "https://content.fortune.com/wp-content/uploads/2016/11/gettyimages-172279787.jpg?resize=750,500",
     firstName: 'Lauren',
     lastName: 'Ruth',
     email: 'lauren.r@company.com',
@@ -26,7 +26,7 @@ const messages: Message[] = [
   },
   {
     id: 2,
-    photo: null,
+    photo: "http://www.apimages.com/Images/Ap_Creative_Stock_Header.jpg",
     firstName: 'Jordan',
     lastName: 'Falker',
     email: 'jordan.f@company.com',

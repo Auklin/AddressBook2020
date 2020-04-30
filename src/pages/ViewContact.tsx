@@ -14,7 +14,9 @@ import {
   useIonViewWillEnter,
   IonInput,
   IonItemDivider,
-  IonText
+  IonText,
+  IonThumbnail,
+  IonImg
 } from '@ionic/react';
 import { personCircle, text } from 'ionicons/icons';
 import { RouteComponentProps } from 'react-router';
@@ -59,6 +61,12 @@ const ViewContact: React.FC<ViewContactProps> = ({ match }) => {
             </IonItem>
 
             <div className="ion-padding">
+
+            <IonItem>
+              <IonThumbnail slot="start">
+                <IonImg src={message.photo} />
+              </IonThumbnail>
+            </IonItem>
 
             <IonLabel position="stacked">First Name </IonLabel>
             <IonItem>
